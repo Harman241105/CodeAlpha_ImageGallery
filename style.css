@@ -6,7 +6,7 @@
 
 body{
 
-  background:#c7c3c3;
+  background:white;
 
   font-family:Arial;
 
@@ -119,7 +119,7 @@ text-shadow: 2px 2px 4px #6b0d0d;
 
 .image h3{
 
-  padding:20px;
+  padding:15px;
 
   text-align:center;
 
@@ -164,7 +164,7 @@ text-shadow: 2px 2px 4px #6b0d0d;
 
   border:none;
 
-  background:orange;
+  background:rgb(168, 98, 98);
 
   color:white;
 
