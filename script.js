@@ -4,6 +4,9 @@ document.querySelector(".gallery");
 const buttons =
 document.querySelectorAll(".btn");
 
+const loadMore =
+document.querySelector(".load-more");
+
 /* Categories */
 
 const categories = [
@@ -16,7 +19,7 @@ const categories = [
 
 let count = 1;
 
-/* Current Active Filter */
+/* Current Filter */
 
 let currentFilter = "all";
 
@@ -24,11 +27,11 @@ let currentFilter = "all";
 
 function addImages(){
 
-  for(let i=0; i<20; i++){
+  for(let i=0; i<40; i++){
 
     let randomCategory;
 
-    /* If ALL */
+    /* ALL */
 
     if(currentFilter === "all"){
 
@@ -41,7 +44,7 @@ function addImages(){
 
     }
 
-    /* Selected Button Category */
+    /* Selected Category */
 
     else{
 
@@ -73,46 +76,31 @@ function addImages(){
 
 addImages();
 
-/* Button Filter */
+/* Load More Button */
+
+loadMore.addEventListener("click",()=>{
+
+  addImages();
+
+});
+
+/* Filter Buttons */
 
 buttons.forEach((button)=>{
 
   button.addEventListener("click",()=>{
 
-    /* Get Button Name */
-
     currentFilter =
     button.dataset.name;
 
-    /* Clear Old Images */
+    /* Clear Gallery */
 
     gallery.innerHTML = "";
 
-    /* Add New Filtered Images */
+    /* Add New Images */
 
     addImages();
 
   });
-
-});
-
-/* Infinite Scroll */
-
-window.addEventListener("scroll",()=>{
-
-  if(
-
-    window.innerHeight +
-    window.scrollY
-
-    >=
-
-    document.body.offsetHeight - 100
-
-  ){
-
-    addImages();
-
-  }
 
 });
