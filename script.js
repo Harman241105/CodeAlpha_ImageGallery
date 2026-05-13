@@ -27,7 +27,7 @@ let currentFilter = "all";
 
 function addImages(){
 
-  for(let i=0; i<40; i++){
+  for(let i=0; i<20; i++){
 
     let randomCategory;
 
