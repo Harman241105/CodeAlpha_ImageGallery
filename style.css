@@ -154,9 +154,35 @@ text-shadow: 2px 2px 4px #6b0d0d;
 
   background:black;
 }
+.load-more{
 
-/* RESPONSIVE */
+  display:block;
 
+  margin:40px auto;
+
+  padding:15px 30px;
+
+  border:none;
+
+  background:orange;
+
+  color:white;
+
+  font-size:18px;
+
+  border-radius:10px;
+
+  cursor:pointer;
+
+  transition:0.3s;
+}
+
+.load-more:hover{
+
+  background:orangered;
+
+  transform:scale(1.05);
+}
 @media(max-width:768px){
 
   .title{
